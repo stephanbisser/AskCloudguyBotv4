@@ -29,7 +29,7 @@ try {
 }
 
 // For local development configuration as defined in .bot file.
-const DEV_ENVIRONMENT = 'development';
+const DEV_ENVIRONMENT = 'production';
 
 // Bot name as defined in .bot file or from runtime.
 // See https://aka.ms/about-bot-file to learn more about .bot files.
@@ -51,9 +51,16 @@ const qnaEndpointSettings = {
 
 // Create adapter. See https://aka.ms/about-bot-adapter to learn more about adapters.
 const adapter = new BotFrameworkAdapter({
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
+});
+
+/*
+const adapter = new BotFrameworkAdapter({
     appId: endpointConfig.appId || process.env.MicrosoftAppId,
     appPassword: endpointConfig.appPassword || process.env.MicrosoftAppPassword
 });
+*/
 
 // Catch-all for errors.
 adapter.onTurnError = async (turnContext, error) => {

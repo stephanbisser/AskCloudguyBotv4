@@ -11,6 +11,14 @@
             "appPassword": ""
         },
         {
+            "type": "endpoint",
+            "name": "production",
+            "endpoint": "http://askcloudguybotv4.azurewebsites.net/api/messages",
+            "appId": "92e1ba2c-4b68-4fd0-8028-dcbbb40f9d44",
+            "id": "2",
+            "appPassword": "njkprKNSV^:^+lcOTV13029"
+        },
+        {
             "type": "qna",
             "name": "askcloudguy-qna",
             "kbId": "79d0bc45-f592-45a0-8cc5-be221472b9c9",
